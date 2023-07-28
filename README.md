@@ -1,4 +1,4 @@
-<h1>File Integrity Monitor in Python</h1>
+<h1>Python File Integrity Monitor</h1>
 
 <h2>Description</h2>
 The main purpose of this File Intregity Monitor is to track changes to files in a specified directory called "Files" and notify the user about any modifications, deletions, or new file creations. 
@@ -15,7 +15,7 @@ It presents a user menu with two options:<br />
 - It saves the file paths and their corresponding hashes into a file called "baseline.txt".
 - This step establishes the initial baseline of the files in the directory.
 
-<br /><br /><b>Option 'B':</b>
+<b>Option 'B':</b>
 
 - The program loads the baseline information (file paths and hashes) from "baseline.txt" into a dictionary.
 - It enters into a continuous monitoring loop that checks the files in the "Files" directory at regular intervals (every second).

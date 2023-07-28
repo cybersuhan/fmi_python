@@ -89,6 +89,7 @@ In this example, I delete the file named ```textfile2.txt```. As soon as I delet
 <img src="https://i.imgur.com/DBY0JRM.png" height="80%" width="80%" alt="Files"/><br /><br />
 
 <h3>Stopping the Program</h3>
+
 The program will continue to monitor the files until you stop it manually by pressing ```Ctrl+C``` in the terminal. If you want to start monitoring again later, you can rerun the program and choose option 'B' again. The program will use the previously collected baseline to continue monitoring the files.
 <!--
  ```diff

@@ -40,37 +40,56 @@ Overall, this program helps users monitor the integrity of files in the "Files" 
 
 Before starting, Make sure that you have Python installed in your system. Open command prompt and change directory to where you downloaded the project. Then enter the command:<br />
 ```python fim.py```<br /><br />
-<img src="https://i.imgur.com/v5ls9Db.png" height="80%" width="80%" alt="Run the Program"/>
+<img src="https://i.imgur.com/v5ls9Db.png" height="80%" width="80%" alt="Run the Program"/><br /><br />
 
-<p align="center">
-Launch the utility: <br/>
+The program will launch and will give two choices:<br />
 
-<br />
-<br />
-Select the disk:  <br/>
-<img src="https://i.imgur.com/tcTyMUE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Enter the number of passes: <br/>
-<img src="https://i.imgur.com/nCIbXbg.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Confirm your selection:  <br/>
-<img src="https://i.imgur.com/cdFHBiU.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Wait for process to complete (may take some time):  <br/>
-<img src="https://i.imgur.com/JL945Ga.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Sanitization complete:  <br/>
-<img src="https://i.imgur.com/K71yaM2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-<br />
-<br />
-Observe the wiped disk:  <br/>
-<img src="https://i.imgur.com/AeZkvFQ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-</p>
+A. Collect new Baseline?<br />
+B. Begin monitoring files with saved Baseline?<br /><br />
+<img src="https://i.imgur.com/uC500ch.png" height="80%" width="80%" alt="Choices"/><br /><br />
 
+<h3>Collect new Baseline</h3>
+In the Python_FIM folder, there is another directory named "Files":<br /><br />
+<img src="https://i.imgur.com/MxcoWlk.png" height="80%" width="80%" alt="Files Folder"/><br /><br />
+
+
+Open the "Files" folder. Add any new files that you want to monitor. There are 3 pre-created text files in the folder. Add any new files in the folder which you would want to monitor:<br />
+<img src="https://i.imgur.com/c9Qjnrg.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+When the files are added in the folder, go back to your command line. Enter ```A``` and press ```Enter```<br /><br />
+<img src="https://i.imgur.com/kHFefnL.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+After pressing ```Enter```, The program will exit. In the program folder, the textfile named ```baseline.txt``` should include all the files with their SHA-512 hashes:<br /><br />
+<img src="https://i.imgur.com/KKoXXqY.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+At this point, the baseline files are documented and are ready for monitoring. 
+
+<h3>Begin Monitoring</h3>
+Run the program again in the command line using ```python fim.py```.<br /><br />
+<img src="https://i.imgur.com/beYHaD9.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+Enter ```B``` and press ```Enter```:<br /><br />
+<img src="https://i.imgur.com/ZyYa30g.png" height="80%" width="80%" alt="Files"/><br /><br />
+The file monitoring will start.
+
+<h3>FIM Examples</h3>
+<h4>Changing file content</h4>
+In this example, I change the file content in ```textfile1.txt```. I added the words ```Changing Content!!!!!!``` in the start of the file. As soon as I save the file, the FMI alerts me that the file has been changed. <br />br />
+<img src="https://i.imgur.com/Ej0cuUa.png" height="80%" width="80%" alt="Files"/><br /><br />
+<img src="https://i.imgur.com/GiidRtk.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+<h4>Adding new files</h4>
+In this example, I add another file to the ```Files``` folder. As soon as I save the file, the FIM alterts me that a new file has been created.<br /><br />
+<img src="https://i.imgur.com/tdTsgxP.png" height="80%" width="80%" alt="Files"/><br /><br />
+<img src="https://i.imgur.com/R1HEy1n.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+<h4>Delete a file</h4>
+In this example, I delete the file named ```textfile2.txt```. As soon as I delete the file, the FIM alerts me that the file has been removed.<br />br />
+<img src="https://i.imgur.com/RXez125.png" height="80%" width="80%" alt="Files"/><br /><br />
+<img src="https://i.imgur.com/DBY0JRM.png" height="80%" width="80%" alt="Files"/><br /><br />
+
+<h3>Stopping the Program</h3>
+The program will continue to monitor the files until you stop it manually by pressing ```Ctrl+C``` in the terminal. If you want to start monitoring again later, you can rerun the program and choose option 'B' again. The program will use the previously collected baseline to continue monitoring the files.
 <!--
  ```diff
 - text in red
